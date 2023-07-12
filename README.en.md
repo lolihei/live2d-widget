@@ -27,7 +27,7 @@ You can also check out example web pages:
 
 If you are a beginner or only need the basic functionality, you can simply add the following line of code to the `head` or `body` of your HTML page to load the widget:
 ```xml
-<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script src="https://gcore.jsdelivr.net/gh/lolihei/live2d-widget@latest/autoload.js"></script>
 ```
 The placement of the code depends on how your website is built. For example, if you are using [Hexo](https://hexo.io), you need to add the above code to the template file of your theme. The modification process is similar for pages generated using various template engines.  
 If your website uses PJAX, since the widget does not need to be refreshed on every page, make sure to place the script outside the PJAX refresh area.
@@ -41,9 +41,9 @@ You can refer to the source code of `autoload.js` to see the available configura
 
 | Option | Type | Default Value | Description |
 | ------ | ---- | ------------- | ----------- |
-| `waifuPath` | `string` | `https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu-tips.json` | Path to the widget resources, can be modified |
+| `waifuPath` | `string` | `https://gcore.jsdelivr.net/gh/lolihei/live2d-widget@latest/waifu-tips.json` | Path to the widget resources, can be modified |
 | `apiPath` | `string` | `https://live2d.fghrsh.net/api/` | API path, optional |
-| `cdnPath` | `string` | `https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/` | CDN path, optional |
+| `cdnPath` | `string` | `https://gcore.jsdelivr.net/gh/fghrsh/live2d_api/` | CDN path, optional |
 | `tools` | `string[]` | see `autoload.js` | Buttons of the loaded tools, optional |
 
 Among them, the parameters `apiPath` and `cdnPath` only need to set one of them. `apiPath` is the URL of the backend API, which can be set up and modified by yourself (there are many things to modify, not discussed here). You can refer to [live2d_api](https://github.com/fghrsh/live2d_api) for more information. On the other hand, `cdnPath` is used to load resources through CDN services like jsDelivr, which provides better stability.
@@ -79,7 +79,7 @@ After making modifications locally, you can deploy the modified project on a ser
 To customize the content, you can fork this repository and push the modified content to your own repository using `git push`. In this case, the usage method becomes:
 
 ```xml
-<script src="https://fastly.jsdelivr.net/gh/username/live2d-widget@latest/autoload.js"></script>
+<script src="https://gcore.jsdelivr.net/gh/username/live2d-widget@latest/autoload.js"></script>
 ```
 
 Replace `username` with your GitHub username. To ensure the content of the CDN is refreshed correctly, you need to create a new git tag and push it to the GitHub repository. Otherwise, `@latest` in the URL will still point to the previous version. Additionally, CDN itself has caching, so the changes may take some time to take effect. Relevant documentation:
